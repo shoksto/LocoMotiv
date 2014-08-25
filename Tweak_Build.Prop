@@ -1,0 +1,62 @@
+#Migliorie foto e video
+
+ro.media.enc.jpeg.quality=100
+postprocess.iso_midband=400
+postprocess.denoise_level=6
+ro.media.enc.hprof.vid.fps=30
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.enc.vid.m4v.fps=30
+ro.media.enc.vid.h264.fps=30
+ro.media.capture.flashIntensity=70
+
+#Amplia segnali radio x una navigazione piu' veloce ( testato con speedtest )
+
+eliminare le 2 righe :
+
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+
+aggiungere le seguenti 7 righe :
+
+codice:
+ro.ril.enable.dtm=1
+ro.ril.gprsclass=10               <---- a 12 consuma batteria
+ro.ril.hep=1                      <---- se ci sono problemi con i video di youtube, mettere 0
+ro.ril.enable.3g.prefix=1
+ro.ril.hsdpa.category=14          <----x velocita' max 21,1mb/s  (guarda le categorie alla riga 30)
+ro.ril.hsupa.category=6
+ro.ril.hsxpa=5
+#Categorie
+Cat 14 = 21,1 Mbit / s 
+Cat 15 = 23,4 Mbit / s
+Cat 16 = 27,9 Mbit / s
+Cat 19 = 35,3 Mbit / s 
+Cat 20 = 42,2 Mbit / s 
+Cat 21 = 23,4 Mbit / s 
+Cat 22 = 27,9 Mbit / s 
+Cat 23 = 35,3 Mbit / s 
+Cat 24 = 42,2 Mbit / s 
+Cat 25 = 46,8 Mbit / s 
+Cat 26 = 55,9 Mbit / s 
+Cat 27 = 70,6 Mbit / s 
+Cat 28 = 84,4 Mbit / s 
+----------------------------------
+#Disabilitare le  ADB  notification Icon
+persist.adb.notify=0
+
+#Abilitare l'Hardware Rendering of the GUI
+debug.sf.hw=1
+video.accelerate.hw=1            <---- alcuni lamentano problemi, personalmente sempre usato senza problemi
+
+#Miglioria scrolling
+windowsmgr.max_events_per_sec=160
+
+#Disabilitare Google OTA Update checkin
+ro.config.nocheckin=1
+
+#Disabilitare Google Report service
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+-----------------------------------
+
