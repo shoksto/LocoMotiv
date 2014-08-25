@@ -1,0 +1,27 @@
+1 - Scompattare il pacchetto SystemUIk@. apk 
+2 - entrare in res/layout
+3 - individuare ed aprire con notepad++ il file tw_super_status_bar.xml
+4 - individuare la stringa :
+
+<com.android.systemui.statusbar.phone.StatusBarWindowView android:background="#00000000" android:focusable="true" android:fitsSystemWindows="true" android:descendantFocusability="afterDescendants"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
+5 - cambiare i valori in rosso del punto 4 con le varianti postate qui sotto :
+
+#00000000 - 100% di trasparenza
+
+#3F000000 - 75% di trasparenza
+
+#7F000000 - 50% di trasparenza
+
+#BF000000 - 25% di trasparenza
+
+6 - chiudere e salvare il file tw_super_status_bar.xml
+7 - entrare in /res/values 
+8 - individuare ed aprire con notepad++ il file drawables.xml
+9 - individuare la stringa :
+codice:
+<item type="drawable" name="status_bar_background">#00000000</item>
+10 - cambiare i valori in rosso come quelli nel punto 5
+11 - salvare il file
+12 - ricompilare il pacchetto SystemUI.apk .  fatto!
