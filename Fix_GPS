@@ -1,0 +1,19 @@
+Fix del GPS :
+
+con rootexplorer o programma similare entrare in etc/
+individuare ed aprire il file gps.conf con editor di testo (ricordarsi di dare i permessi r/o )
+si dovrebbe ottenere questo :
+
+NTP_SERVER=north-america.pool.ntp.org
+XTRA_SERVER_1=http://gllto.glpals.com/4day/glo/v2/latest/lto2.dat
+XTRA_SERVER_2=http://gllto.glpals.com/4day/glo/v2/latest/lto2.dat
+XTRA_SERVER_3=http://gllto.glpals.com/4day/......eccc.
+
+cambiare north-america in it ottenendo questo :
+
+NTP_SERVER=it.pool.ntp.org
+XTRA_SERVER_1=http://gllto.glpals.com/4day/glo/v2/latest/lto2.dat
+XTRA_SERVER_2=http://gllto.glpals.com/4day/glo/v2/latest/lto2.dat
+XTRA_SERVER_3=http://gllto.glpals.com/4day.........eccc.
+
+salvare ed uscire , riavviare
