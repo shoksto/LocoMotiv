@@ -1,0 +1,18 @@
+Decompilare secphone.apk
+
+andare in \smali\com\android\phone e aprire Ringer$1.smali 
+
+cercare  la stringa Landroid/media/AudioManager;->setStreamVolume(III)V. 
+Una volta individuata bisogna eliminare la riga che viene dopo eliminando anche lo spazio,quindi lasciarne solo uno tra le varie stringhe:
+
+COSI:
+
+iget-object v1,v1,Lcom/android/phone/Ringer;>mAudioManager:Landroid/media/AudioManager;
+
+-- invoke-virtual{v1, v6, v4, v5}, Landroid/media/AudioManager;->setStreamVolume(III)V
+
+.line 573
+
+const/4 v1, 0x7
+
+const-wide/16 v2,0x7d0
