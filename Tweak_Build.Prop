@@ -10,16 +10,15 @@ ro.media.enc.vid.m4v.fps=30
 ro.media.enc.vid.h264.fps=30
 ro.media.capture.flashIntensity=70
 
-#Amplia segnali radio x una navigazione piu' veloce ( testato con speedtest )
+#Amplia segnali radio ( testato con speedtest )
 
-eliminare le 2 righe :
+eliminare le righe :
 
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
 
-aggiungere le seguenti 7 righe :
+aggiungere le 7 righe :
 
-codice:
 ro.ril.enable.dtm=1
 ro.ril.gprsclass=10               <---- a 12 consuma batteria
 ro.ril.hep=1                      <---- se ci sono problemi con i video di youtube, mettere 0
@@ -27,6 +26,7 @@ ro.ril.enable.3g.prefix=1
 ro.ril.hsdpa.category=14          <----x velocita' max 21,1mb/s  (guarda le categorie alla riga 30)
 ro.ril.hsupa.category=6
 ro.ril.hsxpa=5
+
 #Categorie
 Cat 14 = 21,1 Mbit / s 
 Cat 15 = 23,4 Mbit / s
@@ -60,3 +60,4 @@ profiler.force_disable_err_rpt=1
 profiler.force_disable_ulog=1
 -----------------------------------
 
+LASCIARE SEMPRE UNA RIGA VUOTA ALLA FINE DEL FILE PRIMA DI SALVARE!!!!
